@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
     
@@ -16,6 +17,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,11 +27,35 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
-    
+        
+        sendLoginRequest(username: emailTextField.text!, password: passwordTextField.text!)
     }
     
     @IBAction func signUpButtonTapped(_ sender: UIButton) {
         
+    }
+    
+    func sendLoginRequest(username: String, password: String) {
+        let url = "https://httpbin.org/post"
+        
+        let parameters = [
+            "username": username,
+            "password": password
+        ]
+        
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
+            print("Success: \(response.result.isSuccess)")
+            print("Response String: \(response.result.value)")
+            if response.result.isSuccess {
+                // Go back to the main screen
+                
+                
+                
+            } else {
+                // Show error
+                
+            }
+        }
     }
 }
 

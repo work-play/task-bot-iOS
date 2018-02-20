@@ -13,9 +13,12 @@
 		5FAD9020203BC57C0009FC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD901F203BC57C0009FC70 /* Assets.xcassets */; };
 		5FAD9023203BC57C0009FC70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD9021203BC57C0009FC70 /* LaunchScreen.storyboard */; };
 		5FAD902D203BC7EB0009FC70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD902C203BC7EB0009FC70 /* LoginViewController.swift */; };
+		BA7E6D7483046FD7F977D2AE /* Pods_Text_Based_Task_Keeper_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251C685759787451CCABBCF0 /* Pods_Text_Based_Task_Keeper_2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13C22AC98B9187363C6A98CD /* Pods-Text-Based-Task-Keeper-2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text-Based-Task-Keeper-2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Text-Based-Task-Keeper-2/Pods-Text-Based-Task-Keeper-2.debug.xcconfig"; sourceTree = "<group>"; };
+		251C685759787451CCABBCF0 /* Pods_Text_Based_Task_Keeper_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Text_Based_Task_Keeper_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAD9015203BC57C0009FC70 /* Text-Based-Task-Keeper-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text-Based-Task-Keeper-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAD9018203BC57C0009FC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FAD901A203BC57C0009FC70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		5FAD9022203BC57C0009FC70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FAD9024203BC57C0009FC70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FAD902C203BC7EB0009FC70 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C1C98D7E752144FE1B9038CB /* Pods-Text-Based-Task-Keeper-2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text-Based-Task-Keeper-2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Text-Based-Task-Keeper-2/Pods-Text-Based-Task-Keeper-2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7E6D7483046FD7F977D2AE /* Pods_Text_Based_Task_Keeper_2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31288C0576276BFC0CC650F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				251C685759787451CCABBCF0 /* Pods_Text_Based_Task_Keeper_2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5FAD900C203BC57B0009FC70 = {
 			isa = PBXGroup;
 			children = (
 				5FAD9017203BC57C0009FC70 /* Text-Based-Task-Keeper-2 */,
 				5FAD9016203BC57C0009FC70 /* Products */,
+				D549C8073A612C66E1072CCB /* Pods */,
+				31288C0576276BFC0CC650F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +98,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		D549C8073A612C66E1072CCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13C22AC98B9187363C6A98CD /* Pods-Text-Based-Task-Keeper-2.debug.xcconfig */,
+				C1C98D7E752144FE1B9038CB /* Pods-Text-Based-Task-Keeper-2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,9 +114,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FAD9027203BC57C0009FC70 /* Build configuration list for PBXNativeTarget "Text-Based-Task-Keeper-2" */;
 			buildPhases = (
+				C6259607F7CD91F220F07DCE /* [CP] Check Pods Manifest.lock */,
 				5FAD9011203BC57C0009FC70 /* Sources */,
 				5FAD9012203BC57C0009FC70 /* Frameworks */,
 				5FAD9013203BC57C0009FC70 /* Resources */,
+				966C76CFAC126A82F95175DB /* [CP] Embed Pods Frameworks */,
+				D992A069961C1FBD257D04E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +176,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		966C76CFAC126A82F95175DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Text-Based-Task-Keeper-2/Pods-Text-Based-Task-Keeper-2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Text-Based-Task-Keeper-2/Pods-Text-Based-Task-Keeper-2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6259607F7CD91F220F07DCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Text-Based-Task-Keeper-2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D992A069961C1FBD257D04E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Text-Based-Task-Keeper-2/Pods-Text-Based-Task-Keeper-2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5FAD9011203BC57C0009FC70 /* Sources */ = {
@@ -292,6 +375,7 @@
 		};
 		5FAD9028203BC57C0009FC70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13C22AC98B9187363C6A98CD /* Pods-Text-Based-Task-Keeper-2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +391,7 @@
 		};
 		5FAD9029203BC57C0009FC70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C98D7E752144FE1B9038CB /* Pods-Text-Based-Task-Keeper-2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

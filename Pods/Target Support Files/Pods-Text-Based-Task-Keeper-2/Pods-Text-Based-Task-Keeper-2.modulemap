@@ -1,0 +1,6 @@
+framework module Pods_Text_Based_Task_Keeper_2 {
+  umbrella header "Pods-Text-Based-Task-Keeper-2-umbrella.h"
+
+  export *
+  module * { export * }
+}
