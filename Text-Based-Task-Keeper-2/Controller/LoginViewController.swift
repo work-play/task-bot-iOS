@@ -49,7 +49,8 @@ class LoginViewController: UIViewController {
             if response.result.isSuccess {
                 // Go back to the main screen
                 
-                
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewController") as UIViewController
+                self.present(viewController, animated: true, completion: nil)
                 
             } else {
                 // Show error
