@@ -12,6 +12,7 @@
 		5FAD901E203BC57C0009FC70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD901C203BC57C0009FC70 /* Main.storyboard */; };
 		5FAD9020203BC57C0009FC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD901F203BC57C0009FC70 /* Assets.xcassets */; };
 		5FAD9023203BC57C0009FC70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD9021203BC57C0009FC70 /* LaunchScreen.storyboard */; };
+		5FAD902D203BC7EB0009FC70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD902C203BC7EB0009FC70 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5FAD901F203BC57C0009FC70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FAD9022203BC57C0009FC70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FAD9024203BC57C0009FC70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FAD902C203BC7EB0009FC70 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		5FAD9017203BC57C0009FC70 /* Text-Based-Task-Keeper-2 */ = {
 			isa = PBXGroup;
 			children = (
+				5FAD902B203BC7D20009FC70 /* Controller */,
+				5FAD902A203BC6800009FC70 /* Storyboard */,
 				5FAD9018203BC57C0009FC70 /* AppDelegate.swift */,
-				5FAD901A203BC57C0009FC70 /* ViewController.swift */,
-				5FAD901C203BC57C0009FC70 /* Main.storyboard */,
 				5FAD901F203BC57C0009FC70 /* Assets.xcassets */,
-				5FAD9021203BC57C0009FC70 /* LaunchScreen.storyboard */,
 				5FAD9024203BC57C0009FC70 /* Info.plist */,
 			);
 			path = "Text-Based-Task-Keeper-2";
+			sourceTree = "<group>";
+		};
+		5FAD902A203BC6800009FC70 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5FAD901C203BC57C0009FC70 /* Main.storyboard */,
+				5FAD9021203BC57C0009FC70 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		5FAD902B203BC7D20009FC70 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5FAD901A203BC57C0009FC70 /* ViewController.swift */,
+				5FAD902C203BC7EB0009FC70 /* LoginViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FAD902D203BC7EB0009FC70 /* LoginViewController.swift in Sources */,
 				5FAD901B203BC57C0009FC70 /* ViewController.swift in Sources */,
 				5FAD9019203BC57C0009FC70 /* AppDelegate.swift in Sources */,
 			);
