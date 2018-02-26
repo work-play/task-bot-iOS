@@ -17,8 +17,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,25 +34,30 @@ class LoginViewController: UIViewController {
     }
     
     func sendLoginRequest(username: String, password: String) {
-        let url = "https://httpbin.org/post"
+        let url = Constants.Config.baseURL
         
         let parameters = [
-            "username": username,
+            "email": username,
             "password": password
         ]
         
         Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
             print("Success: \(response.result.isSuccess)")
             print("Response String: \(response.result.value)")
+            
             if response.result.isSuccess {
                 // Go back to the main screen
-                
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "viewController") as UIViewController
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "collectionViewController") as UIViewController
                 self.present(viewController, animated: true, completion: nil)
                 
             } else {
                 // Show error
+                print("false")
                 
+                //For test
+                // Go back to the main screen
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "collectionViewController") as UIViewController
+                self.present(viewController, animated: true, completion: nil)
             }
         }
     }

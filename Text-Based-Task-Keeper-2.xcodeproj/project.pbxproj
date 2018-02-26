@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F2F2B6D2043B42500CAF021 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F2B6C2043B42500CAF021 /* Message.swift */; };
+		5F69859320436F8E00DF59CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69859220436F8E00DF59CD /* Constants.swift */; };
+		5F69859520437DBC00DF59CD /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69859420437DBC00DF59CD /* CollectionViewController.swift */; };
+		5F6985972043B26500DF59CD /* CollectionNewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6985962043B26500DF59CD /* CollectionNewCell.swift */; };
 		5FAD9019203BC57C0009FC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD9018203BC57C0009FC70 /* AppDelegate.swift */; };
 		5FAD901B203BC57C0009FC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD901A203BC57C0009FC70 /* ViewController.swift */; };
 		5FAD901E203BC57C0009FC70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD901C203BC57C0009FC70 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		13C22AC98B9187363C6A98CD /* Pods-Text-Based-Task-Keeper-2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text-Based-Task-Keeper-2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Text-Based-Task-Keeper-2/Pods-Text-Based-Task-Keeper-2.debug.xcconfig"; sourceTree = "<group>"; };
 		251C685759787451CCABBCF0 /* Pods_Text_Based_Task_Keeper_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Text_Based_Task_Keeper_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F2F2B6C2043B42500CAF021 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		5F69859220436F8E00DF59CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5F69859420437DBC00DF59CD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		5F6985962043B26500DF59CD /* CollectionNewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNewCell.swift; sourceTree = "<group>"; };
 		5FAD9015203BC57C0009FC70 /* Text-Based-Task-Keeper-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text-Based-Task-Keeper-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FAD9018203BC57C0009FC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FAD901A203BC57C0009FC70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +58,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5F69858F20436EF800DF59CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F6985962043B26500DF59CD /* CollectionNewCell.swift */,
+				5F2F2B6C2043B42500CAF021 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F69859020436F0800DF59CD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5F69859120436F7E00DF59CD /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				5FAD9024203BC57C0009FC70 /* Info.plist */,
+				5F69859220436F8E00DF59CD /* Constants.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		5FAD900C203BC57B0009FC70 = {
 			isa = PBXGroup;
 			children = (
@@ -71,11 +104,13 @@
 		5FAD9017203BC57C0009FC70 /* Text-Based-Task-Keeper-2 */ = {
 			isa = PBXGroup;
 			children = (
+				5F69859120436F7E00DF59CD /* Supporting */,
+				5F69859020436F0800DF59CD /* Helpers */,
+				5F69858F20436EF800DF59CD /* Models */,
 				5FAD902B203BC7D20009FC70 /* Controller */,
 				5FAD902A203BC6800009FC70 /* Storyboard */,
 				5FAD9018203BC57C0009FC70 /* AppDelegate.swift */,
 				5FAD901F203BC57C0009FC70 /* Assets.xcassets */,
-				5FAD9024203BC57C0009FC70 /* Info.plist */,
 			);
 			path = "Text-Based-Task-Keeper-2";
 			sourceTree = "<group>";
@@ -94,6 +129,7 @@
 			children = (
 				5FAD901A203BC57C0009FC70 /* ViewController.swift */,
 				5FAD902C203BC7EB0009FC70 /* LoginViewController.swift */,
+				5F69859420437DBC00DF59CD /* CollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,7 +276,11 @@
 			files = (
 				5FAD902D203BC7EB0009FC70 /* LoginViewController.swift in Sources */,
 				5FAD901B203BC57C0009FC70 /* ViewController.swift in Sources */,
+				5F6985972043B26500DF59CD /* CollectionNewCell.swift in Sources */,
 				5FAD9019203BC57C0009FC70 /* AppDelegate.swift in Sources */,
+				5F69859320436F8E00DF59CD /* Constants.swift in Sources */,
+				5F69859520437DBC00DF59CD /* CollectionViewController.swift in Sources */,
+				5F2F2B6D2043B42500CAF021 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QV974Z4665;
-				INFOPLIST_FILE = "Text-Based-Task-Keeper-2/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Text-Based-Task-Keeper-2/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tokyo.fyi.Text-Based-Task-Keeper-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -396,7 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QV974Z4665;
-				INFOPLIST_FILE = "Text-Based-Task-Keeper-2/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Text-Based-Task-Keeper-2/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tokyo.fyi.Text-Based-Task-Keeper-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
