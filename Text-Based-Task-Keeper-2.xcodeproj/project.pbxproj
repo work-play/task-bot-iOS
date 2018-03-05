@@ -17,6 +17,7 @@
 		5FAD9020203BC57C0009FC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD901F203BC57C0009FC70 /* Assets.xcassets */; };
 		5FAD9023203BC57C0009FC70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FAD9021203BC57C0009FC70 /* LaunchScreen.storyboard */; };
 		5FAD902D203BC7EB0009FC70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAD902C203BC7EB0009FC70 /* LoginViewController.swift */; };
+		5FD422F2204CCA1000FF9C89 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD422F1204CCA1000FF9C89 /* Switcher.swift */; };
 		BA7E6D7483046FD7F977D2AE /* Pods_Text_Based_Task_Keeper_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251C685759787451CCABBCF0 /* Pods_Text_Based_Task_Keeper_2.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		5FAD9022203BC57C0009FC70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FAD9024203BC57C0009FC70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FAD902C203BC7EB0009FC70 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5FD422F1204CCA1000FF9C89 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		C1C98D7E752144FE1B9038CB /* Pods-Text-Based-Task-Keeper-2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text-Based-Task-Keeper-2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Text-Based-Task-Keeper-2/Pods-Text-Based-Task-Keeper-2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 		5F69859020436F0800DF59CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5FD422F1204CCA1000FF9C89 /* Switcher.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				5FAD902D203BC7EB0009FC70 /* LoginViewController.swift in Sources */,
 				5FAD901B203BC57C0009FC70 /* ViewController.swift in Sources */,
+				5FD422F2204CCA1000FF9C89 /* Switcher.swift in Sources */,
 				5F6985972043B26500DF59CD /* CollectionNewCell.swift in Sources */,
 				5FAD9019203BC57C0009FC70 /* AppDelegate.swift in Sources */,
 				5F69859320436F8E00DF59CD /* Constants.swift in Sources */,

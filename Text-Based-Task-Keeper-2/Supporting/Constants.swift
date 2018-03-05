@@ -10,6 +10,6 @@ import Foundation
 
 struct Constants {
     enum Config {
-        static let baseURL: String = "https://ancient-sea-46887.herokuapp.com/users"
+        static let baseURL: String = "https://ancient-sea-46887.herokuapp.com/users/sign_in"
     }
 }

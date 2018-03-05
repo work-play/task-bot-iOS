@@ -35,10 +35,17 @@ class LoginViewController: UIViewController {
     
     func sendLoginRequest(username: String, password: String) {
         let url = Constants.Config.baseURL
-        
+        /*
         let parameters = [
             "email": username,
             "password": password
+        ]*/
+        
+        let parameters = [
+            "user": [
+                "email": username,
+                "password": password,
+            ]
         ]
         
         Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
@@ -46,13 +53,18 @@ class LoginViewController: UIViewController {
             print("Response String: \(response.result.value)")
             
             if response.result.isSuccess {
+                UserDefaults.standard.set(true, forKey: "status")
+                Switcher.updateDefaultScreen()
+                
                 // Go back to the main screen
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "collectionViewController") as UIViewController
-                self.present(viewController, animated: true, completion: nil)
+                //let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "collectionViewController") as UIViewController
+                //self.present(viewController, animated: true, completion: nil)
                 
             } else {
                 // Show error
                 print("false")
+                
+                UserDefaults.standard.set(true, forKey: "status")
                 
                 //For test
                 // Go back to the main screen
