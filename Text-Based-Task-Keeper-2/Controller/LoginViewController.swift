@@ -48,7 +48,8 @@ class LoginViewController: UIViewController {
             ]
         ]
         
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default).responseJSON { response in
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default).responseString { response in
+            print(response)
             print("Success: \(response.result.isSuccess)")
             print("Response String: \(response.result.value)")
             
@@ -64,12 +65,8 @@ class LoginViewController: UIViewController {
                 // Show error
                 print("false")
                 
-                UserDefaults.standard.set(true, forKey: "status")
-                
-                //For test
-                // Go back to the main screen
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "collectionViewController") as UIViewController
-                self.present(viewController, animated: true, completion: nil)
+                UserDefaults.standard.set(false, forKey: "status")
+    
             }
         }
     }
