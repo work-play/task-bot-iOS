@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
                 
                 // save API AuthToken and ExpiryDate in Keychain
                 if let authorizationHeader = Request.authorizationHeader(user: parameters["user"]!["email"]!, password: parameters["user"]!["password"]!) {
-                    self.saveApiTokenInKeychain(tokenString: authorizationHeader.value)
+                    self.saveApiTokenInKeychain(tokenValue: authorizationHeader.value, tokenKey: authorizationHeader.key)
                 }
                 
                 //Go to the main screen
@@ -75,10 +75,10 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func saveApiTokenInKeychain(tokenString: String) {
+    func saveApiTokenInKeychain(tokenValue: String, tokenKey: String) {
         print("Save API token")
-        let keychain = Keychain(service: "com.example.github-token")
-        keychain["api_authtoken"] = tokenString
+        print("tokenKey:" + tokenKey)
+        Constants.Auth.keychain[tokenKey] = tokenValue
     }
 }
 

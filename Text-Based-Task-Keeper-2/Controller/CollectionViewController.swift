@@ -22,6 +22,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("auth key:" + Constants.Auth.keychain[string: "Authorization"]!)
     }
     
     override func didReceiveMemoryWarning() {
@@ -105,9 +106,11 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         let url = Constants.Config.baseURL + "/:user_id/tasks"
         let parameters = ["task": message]
         
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default).responseString { response in
+        var headers: HTTPHeaders = [:]
+        headers["Authorization"] = Constants.Auth.keychain[string: "Authorization"]
+
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseString { response in
             print("Success: \(response.result.isSuccess)")
-            print("Response String: \(response.result.value)")
             
             if response.result.isSuccess {
                 print("success")
@@ -115,7 +118,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             } else {
                 // Show error
                 print("false")
-                
                 
             }
         }
