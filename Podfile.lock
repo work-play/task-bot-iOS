@@ -15,15 +15,18 @@ PODS:
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
   - Alamofire (4.6.0)
+  - KeychainAccess (3.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Alamofire
+  - KeychainAccess
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
 
-PODFILE CHECKSUM: d84e2e3f75c676fa8f3e92ddbcf08bbf6a38d607
+PODFILE CHECKSUM: 5c1829188637d1967b48b51238746654e6cf14a1
 
 COCOAPODS: 1.4.0

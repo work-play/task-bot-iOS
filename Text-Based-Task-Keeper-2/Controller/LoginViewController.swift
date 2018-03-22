@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import KeychainAccess
 
 class LoginViewController: UIViewController {
     
@@ -49,17 +50,20 @@ class LoginViewController: UIViewController {
         ]
         
         Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default).responseString { response in
-            print(response)
             print("Success: \(response.result.isSuccess)")
             print("Response String: \(response.result.value)")
+            print("Content-Type: \(response.response?.allHeaderFields)")
             
             if response.result.isSuccess {
                 UserDefaults.standard.set(true, forKey: "status")
-                Switcher.updateDefaultScreen()
                 
-                // Go back to the main screen
-                //let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "collectionViewController") as UIViewController
-                //self.present(viewController, animated: true, completion: nil)
+                // save API AuthToken and ExpiryDate in Keychain
+                if let authorizationHeader = Request.authorizationHeader(user: parameters["user"]!["email"]!, password: parameters["user"]!["password"]!) {
+                    self.saveApiTokenInKeychain(tokenString: authorizationHeader.value)
+                }
+                
+                //Go to the main screen
+                Switcher.updateDefaultScreen()
                 
             } else {
                 // Show error
@@ -69,6 +73,12 @@ class LoginViewController: UIViewController {
     
             }
         }
+    }
+    
+    func saveApiTokenInKeychain(tokenString: String) {
+        print("Save API token")
+        let keychain = Keychain(service: "com.example.github-token")
+        keychain["api_authtoken"] = tokenString
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -93,13 +94,30 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
             messageExample.append(newMessage)
             
             //Send server
+            sendMessageTotheServer(message: newMessageText)
             
         }
         taskTextField.text = nil
         collectionView?.reloadData()
     }
     
-    func sendMessageTotheServer(){
+    func sendMessageTotheServer(message: String){
+        let url = Constants.Config.baseURL + "/:user_id/tasks"
+        let parameters = ["task": message]
         
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default).responseString { response in
+            print("Success: \(response.result.isSuccess)")
+            print("Response String: \(response.result.value)")
+            
+            if response.result.isSuccess {
+                print("success")
+                
+            } else {
+                // Show error
+                print("false")
+                
+                
+            }
+        }
     }
 }
