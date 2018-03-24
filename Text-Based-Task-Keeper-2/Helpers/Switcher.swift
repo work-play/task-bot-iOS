@@ -15,7 +15,7 @@ class Switcher {
         var defaultScreen: UIViewController?
         
         if status == true {
-            defaultScreen = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "collectionViewController") as! CollectionViewController
+            defaultScreen = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "collectionViewController") as! UINavigationController
         } else {
             defaultScreen = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginViewController") as! LoginViewController
         }

@@ -60,6 +60,7 @@ class LoginViewController: UIViewController {
                 // save API AuthToken and ExpiryDate in Keychain
                 if let authorizationHeader = Request.authorizationHeader(user: parameters["user"]!["email"]!, password: parameters["user"]!["password"]!) {
                     self.saveApiTokenInKeychain(tokenValue: authorizationHeader.value, tokenKey: authorizationHeader.key)
+                    self.saveApiTokenInKeychain(tokenValue: username, tokenKey: "email")
                 }
                 
                 //Go to the main screen

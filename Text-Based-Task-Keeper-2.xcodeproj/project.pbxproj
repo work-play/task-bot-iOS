@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0D7C8820662DFC00403460 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D7C8720662DFC00403460 /* SettingViewController.swift */; };
+		5F0D7C8A2066333700403460 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D7C892066333700403460 /* User.swift */; };
 		5F2F2B6D2043B42500CAF021 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F2B6C2043B42500CAF021 /* Message.swift */; };
 		5F69859320436F8E00DF59CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69859220436F8E00DF59CD /* Constants.swift */; };
 		5F69859520437DBC00DF59CD /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69859420437DBC00DF59CD /* CollectionViewController.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		13C22AC98B9187363C6A98CD /* Pods-Text-Based-Task-Keeper-2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text-Based-Task-Keeper-2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Text-Based-Task-Keeper-2/Pods-Text-Based-Task-Keeper-2.debug.xcconfig"; sourceTree = "<group>"; };
 		251C685759787451CCABBCF0 /* Pods_Text_Based_Task_Keeper_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Text_Based_Task_Keeper_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F0D7C8720662DFC00403460 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5F0D7C892066333700403460 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5F2F2B6C2043B42500CAF021 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		5F69859220436F8E00DF59CD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5F69859420437DBC00DF59CD /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 			children = (
 				5F6985962043B26500DF59CD /* CollectionNewCell.swift */,
 				5F2F2B6C2043B42500CAF021 /* Message.swift */,
+				5F0D7C892066333700403460 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				5FAD901A203BC57C0009FC70 /* ViewController.swift */,
 				5FAD902C203BC7EB0009FC70 /* LoginViewController.swift */,
 				5F69859420437DBC00DF59CD /* CollectionViewController.swift */,
+				5F0D7C8720662DFC00403460 /* SettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -284,8 +290,10 @@
 				5FD422F2204CCA1000FF9C89 /* Switcher.swift in Sources */,
 				5F6985972043B26500DF59CD /* CollectionNewCell.swift in Sources */,
 				5FAD9019203BC57C0009FC70 /* AppDelegate.swift in Sources */,
+				5F0D7C8820662DFC00403460 /* SettingViewController.swift in Sources */,
 				5F69859320436F8E00DF59CD /* Constants.swift in Sources */,
 				5F69859520437DBC00DF59CD /* CollectionViewController.swift in Sources */,
+				5F0D7C8A2066333700403460 /* User.swift in Sources */,
 				5F2F2B6D2043B42500CAF021 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
