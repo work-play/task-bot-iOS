@@ -63,6 +63,9 @@ class LoginViewController: UIViewController {
                     self.saveApiTokenInKeychain(tokenValue: username, tokenKey: "email")
                 }
                 
+                // save user ID in Keychain
+                //self.saveApiTokenInKeychain(tokenValue: "9", tokenKey: "userID")
+                
                 //Go to the main screen
                 Switcher.updateDefaultScreen()
                 

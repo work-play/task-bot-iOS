@@ -104,13 +104,22 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }
     
     func sendMessageTotheServer(message: String){
-        let url = Constants.Config.baseURL + "/:user_id/tasks"
+        let url = Constants.Config.baseURL + "/9/tasks"
         let parameters = ["task": message]
+        
+        // cookies
+        // let cookies = HTTPCookieStorage.sharedHTTPCookieStorage().cookiesForURL(authUrl!)
+        let cookies = HTTPCookieStorage.shared.cookies
+        
+        //let header  = NSHTTPCookie.requestHeaderFieldsWithCookies(cookies!)
+        //request.allHTTPHeaderFields = header
+        
+        let header = HTTPCookie.requestHeaderFields(with: cookies!)
         
         var headers: HTTPHeaders = [:]
         headers["Authorization"] = Constants.Auth.keychain[string: "Authorization"]
 
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseString { response in
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: header).responseString { response in
             print("Success: \(response.result.isSuccess)")
             
             if response.result.isSuccess {
