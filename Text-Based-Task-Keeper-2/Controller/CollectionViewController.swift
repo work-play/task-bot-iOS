@@ -42,37 +42,47 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         let estimatedHeight = NSString(string: messageExample[indexPath.item].message).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)], context: nil)
         
-        print(estimatedHeight.width)
-        
         var defaultWidth = estimatedHeight.width
         var defaultHeight = estimatedHeight.height
         
-        if estimatedHeight.width < 10 {
-            defaultWidth = 20
+        if estimatedHeight.width < 50 {
+            defaultWidth = 100
         }
         
         if messageExample[indexPath.item].isSender == false {
             // Adjust a size of the bubble and the text
-            cell.bubbleView.frame = CGRect(x: 20, y: 0, width: defaultWidth, height: estimatedHeight.height + 40)
-            cell.messageTextView.frame = CGRect(x: 25, y: 0, width: defaultWidth + 8, height: estimatedHeight.height + 40)
+            cell.bubbleView.frame = CGRect(x: 0, y: 0
+                , width: defaultWidth, height: estimatedHeight.height + 60)
+            cell.messageTextView.frame = CGRect(x: 5, y: 10, width: defaultWidth + 8, height: estimatedHeight.height + 60)
             
             // Create a Bubble style
-            cell.bubbleView.layer.cornerRadius = 15
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = cell.bubbleView.frame
+            rectShape.position = cell.bubbleView.center
+            rectShape.path = UIBezierPath(roundedRect: cell.bubbleView.bounds, byRoundingCorners: [.bottomRight , .topRight], cornerRadii: CGSize(width: 35, height: 35)).cgPath
+
             cell.bubbleView.layer.masksToBounds = true
-            cell.bubbleView.backgroundColor = UIColor(red: 223/255, green: 226/244, blue: 231/255, alpha: 1)
-            cell.messageTextView.textColor = UIColor.black
+            cell.bubbleView.backgroundColor = UIColor(red: 85/255, green: 123/244, blue: 226/255, alpha: 1)
+            cell.messageTextView.textColor = UIColor.white
+            cell.bubbleView.layer.mask = rectShape
             
             cell.displayContent(message: messageExample[indexPath.item].message)
+            
         } else {
             // Adjust a size of the blue bubble and the text
-            cell.bubbleView.frame = CGRect(x: view.frame.width - defaultWidth - 20, y: 0, width: defaultWidth, height: estimatedHeight.height + 40)
-            cell.messageTextView.frame = CGRect(x: view.frame.width - defaultWidth - 10, y: 0, width: defaultWidth + 8, height: estimatedHeight.height + 40)
+            cell.bubbleView.frame = CGRect(x: view.frame.width - defaultWidth, y: 0, width: defaultWidth, height: estimatedHeight.height + 60)
+            cell.messageTextView.frame = CGRect(x: view.frame.width - defaultWidth + 18, y: 10, width: defaultWidth + 8 , height: estimatedHeight.height + 60)
             
             // Create a blue Bubble style
-            cell.bubbleView.layer.cornerRadius = 15
+            let rectShape = CAShapeLayer()
+            rectShape.bounds = cell.bubbleView.frame
+            rectShape.position = cell.bubbleView.center
+            rectShape.path = UIBezierPath(roundedRect: cell.bubbleView.bounds, byRoundingCorners: [.bottomLeft , .topLeft], cornerRadii: CGSize(width: 35, height: 35)).cgPath
+            
             cell.bubbleView.layer.masksToBounds = true
-            cell.bubbleView.backgroundColor = UIColor(red: 0, green: 153/255, blue: 255/255, alpha: 1)
+            cell.bubbleView.backgroundColor = UIColor(red: 58/255, green: 207/255, blue: 213/255, alpha: 1)
             cell.messageTextView.textColor = UIColor.white
+            cell.bubbleView.layer.mask = rectShape
             
             cell.displayContent(message: messageExample[indexPath.item].message)
         }
@@ -85,7 +95,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         let size = CGSize(width: view.frame.width, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         let estimatedHeight = NSString(string: messageExample[indexPath.item].message).boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)], context: nil)
-        return CGSize(width: view.frame.width, height: estimatedHeight.height + 40)
+        return CGSize(width: view.frame.width, height: estimatedHeight.height + 60)
     }
     
     @IBAction func sendButtonTapped(_ sender: UIButton) {

@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gku-24-j5B">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gku-24-j5B">
                                 <rect key="frame" x="40" y="250" width="334" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Y5u-gD-bUg"/>
@@ -33,7 +33,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G57-OE-hS3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G57-OE-hS3">
                                 <rect key="frame" x="40" y="355" width="334" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Haf-pq-9z1"/>
@@ -48,7 +48,7 @@
                                     <constraint firstAttribute="height" constant="50" id="M0h-E1-lgo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4S9-h3-3Tj">
@@ -57,7 +57,7 @@
                                     <constraint firstAttribute="height" constant="20" id="vU7-fQ-n40"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHN-kE-ukF">
@@ -66,17 +66,17 @@
                                     <constraint firstAttribute="height" constant="20" id="Q9z-XJ-YLd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gt5-5n-t8Y">
                                 <rect key="frame" x="40" y="521" width="334" height="50"/>
-                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Cxf-uC-RcL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.18431372549019609" green="0.36470588235294116" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signInButtonTapped:" destination="PcG-sM-6ri" eventType="touchUpInside" id="ho5-LC-wQr"/>
@@ -88,13 +88,15 @@
                                     <constraint firstAttribute="height" constant="45" id="O0v-ML-1S1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <state key="normal" title="Sign Up"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="signUpButtonTapped:" destination="PcG-sM-6ri" eventType="touchUpInside" id="Bxk-qL-NtG"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.33333333333333331" green="0.4823529411764706" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Gt5-5n-t8Y" firstAttribute="centerX" secondItem="0tA-1U-4Pr" secondAttribute="centerX" id="72B-7S-QpA"/>
                             <constraint firstItem="ohm-9y-dn1" firstAttribute="centerX" secondItem="0tA-1U-4Pr" secondAttribute="centerX" id="72h-u2-LAX"/>
@@ -172,33 +174,33 @@
                             <rect key="frame" x="0.0" y="-64" width="414" height="736"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1e-s3-Y6V">
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1e-s3-Y6V">
                                     <rect key="frame" x="-9" y="675" width="433" height="70"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send tasks" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKm-Hj-z53">
+                                        <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Send tasks" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKm-Hj-z53">
                                             <rect key="frame" x="20" y="20" width="343" height="30"/>
+                                            <color key="backgroundColor" red="0.93333333333333335" green="0.94901960784313721" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wR0-kq-vM9">
                                             <rect key="frame" x="377" y="20" width="36" height="30"/>
-                                            <state key="normal" title="Send"/>
+                                            <state key="normal" title="Send">
+                                                <color key="titleColor" red="0.33333333333333331" green="0.4823529411764706" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
                                             <connections>
                                                 <action selector="sendButtonTapped:" destination="vLm-z0-7P6" eventType="touchUpInside" id="Oud-KQ-VbB"/>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="wR0-kq-vM9" secondAttribute="trailing" constant="20" id="r7F-yW-ZCo"/>
-                                    </constraints>
                                 </stackView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="I1e-s3-Y6V" secondAttribute="trailing" id="5AX-wV-HrN"/>
-                                <constraint firstAttribute="bottom" secondItem="I1e-s3-Y6V" secondAttribute="bottom" constant="5" id="IvD-eA-Idt"/>
                                 <constraint firstItem="I1e-s3-Y6V" firstAttribute="leading" secondItem="7LP-jP-haq" secondAttribute="leading" id="jc1-je-jkZ"/>
+                                <constraint firstAttribute="bottom" secondItem="I1e-s3-Y6V" secondAttribute="bottom" id="txq-mf-jmf"/>
                             </constraints>
                         </view>
                         <cells>
